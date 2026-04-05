@@ -1,0 +1,116 @@
+
+* {
+  padding: 5px;
+  margin: 5px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+/* Apply colors ONLY to body */
+body {
+  background: #0b0b0c;
+  color: #f5f5f7;
+}
+#logo {
+  width: 18%;
+  display: block;
+}
+/* NAVIGATION */
+nav a {
+  text-decoration: none;
+  color: #f5f5f7;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+nav a:hover {
+  border-color: #4d5c3b;
+}
+
+/* CURRENT PAGE */
+.active {
+  color: #92ad70;
+  font-weight: bold;
+}
+
+/* CTA BUTTON */
+.cta {
+  background-color: #92ad70;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+
+
+/* TABLE */
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+
+/* FORM */
+form * {
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'nav_bar nav_bar'
+    'main main-img'
+    'footer footer';
+
+  max-width: 1200px;      /* optional, keeps page from being too wide */
+  margin: 0 auto;          /* this centers the container horizontally */
+  padding: 0 20px;         /* optional, adds space on the sides */
+}
+
+.header { grid-area: header; }
+.nav_bar { grid-area: nav_bar; }
+.main { grid-area: main; }
+.main_img { grid-area: main-img; }
+.footer { grid-area: footer; }
+
+
+.nav_bar {
+    grid-area: nav_bar;      /* keeps the nav in the right CSS Grid spot */
+    display: flex;           /* enables Flexbox inside the nav */
+    justify-content: right;  /* moves links to the right */
+    gap: 15px;               /* optional spacing between links */
+    align-items: center;     /* vertically centers links if nav has height */
+}
+
+.main {
+    grid-area: main;          /* ensures the main section stays in grid */
+    display: flex;            /* Flexbox for internal layout */
+    flex-direction: column;   /* stack items top-to-bottom */
+    align-items: center;      /* horizontally center everything inside */
+    gap: 20px;                /* optional spacing between items */
+    padding: 20px;            /* optional spacing inside the main section */
+}
+
+
+.footer {
+  border-top: 1px solid rgba(245,245,247,.12);
+  padding: 18px 16px;
+  text-align: center;
+  color: rgba(245,245,247,.72);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}

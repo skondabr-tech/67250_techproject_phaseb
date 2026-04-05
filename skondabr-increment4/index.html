@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shruthika Kondabrolu">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="./static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <img id="logo" src="static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav class="nav_bar">
+            <a href="index.html">Home</a>
+            <a href="views/explore.html">Explore</a>
+            <a href="views/exhibitions.html">Exhibitions</a>
+            <a href="views/tickets.html">Buy Tickets</a>
+            <a href="views/checkout.html">Checkout</a>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <h2 id="greeting">Welcome to MonoMuse</h2>
+            <p id="shortIntro">MonoMuse is your gateway to immersive art and technology exhibitions.</p>
+
+            <!-- Long intro hidden by default -->
+            <p id="longIntro" style="display:none;">
+                Explore our curated exhibitions, interact with digital art installations, and experience the fusion of history and innovation. MonoMuse offers hands-on workshops, live demonstrations, and special events throughout the year.
+            </p>
+
+            <!-- Read More / Read Less Buttons -->
+            <button id="readMore">Read More</button>
+            <button id="readLess" style="display:none;">Read Less</button>
+
+            <!-- Optional: Homepage feature button -->
+            <div style="margin-top:20px;">
+                <a href="views/tickets.html"><button>Buy Tickets Now</button></a>
+            </div>
+
+            
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+
+    <!-- jQuery Toggle Script -->
+    <script>
+    $(document).ready(function(){
+
+        $("#readMore").click(function(){ 
+            $("#longIntro").show();
+            $("#readLess").show();
+            $("#readMore").hide();
+        });
+
+        $("#readLess").click(function(){ 
+            $("#longIntro").hide();
+            $("#readLess").hide();
+            $("#readMore").show();
+        });
+
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shruthika Kondabrolu">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Buy Tickets - MonoMuse">
+    <title>Buy Tickets - MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <h2>Buy Tickets</h2>
+            <p>Choose your ticket type and date below.</p>
+
+            <!-- Ticket Prices -->
+            <h3>Ticket Prices</h3>
+            <ul>
+                <li>Adult: $15</li>
+                <li>Student/Senior: $10</li>
+                <li>Children (under 12): $5</li>
+            </ul>
+
+            <!-- Monthly Ticket Schedule -->
+            <h3>Available Dates</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Tickets Available</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>April 10, 2026</td>
+                        <td>50</td>
+                        <td><button class="buyNow">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 17, 2026</td>
+                        <td>50</td>
+                        <td><button class="buyNow">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 24, 2026</td>
+                        <td>50</td>
+                        <td><button class="buyNow">Buy Now</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Hidden Purchase Form -->
+            <div id="purchaseForm" style="display:none; margin-top:20px;">
+                <h3>Purchase Tickets</h3>
+                <form>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="quantity">Ticket Quantity:</label><br>
+                    <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+                    <label for="date">Selected Date:</label><br>
+                    <input type="text" id="date" name="date" readonly><br><br>
+
+                    <input type="button" id="submitBtn" value="Submit">
+                </form>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+    
+
+    
+</body>
+</html>
+
