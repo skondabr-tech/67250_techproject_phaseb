@@ -1,0 +1,268 @@
+
+* {
+  padding: 5px;
+  margin: 5px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+/* Headers use Calistoga */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Calistoga', cursive;
+  font-weight: normal; /* optional but recommended */
+}
+
+/* Apply colors ONLY to body */
+body {
+  background: #0b0b0c;
+  color: #f5f5f7;
+}
+
+/* Headings colors */
+h2 {
+  color: #ef0a7d;
+  font-weight: 500;
+}
+
+h3 {
+  color: #e99cab;
+  font-weight: 500;
+}
+
+h4 {
+  color: #eb98c1;
+  font-weight: 500;
+}
+#logo {
+  width: 18%;
+  display: block;
+}
+/* NAVIGATION */
+nav a {
+  text-decoration: none;
+  color: #f5f5f7;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+nav a:hover {
+  border-color: #d31a73;
+}
+
+/* CURRENT PAGE */
+.active {
+  color: #f685b6;
+  font-weight: bold;
+}
+
+/* CTA BUTTON */
+.cta {
+  background-color: #f54ac2;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+
+
+/* TABLE */
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+
+/* FORM */
+form * {
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'nav_bar nav_bar'
+    'main main'   
+    'footer footer';
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header { grid-area: header; }
+.nav_bar { grid-area: nav_bar; }
+.main { grid-area: main; }
+.main_img { grid-area: main-img; }
+.footer { grid-area: footer; }
+
+
+.nav_bar {
+    grid-area: nav_bar;      /* keeps the nav in the right CSS Grid spot */
+    display: flex;           /* enables Flexbox inside the nav */
+    justify-content: flex-end;  /* moves links to the right */
+    gap: 15px;               /* optional spacing between links */
+    align-items: center;     /* vertically centers links if nav has height */
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;   /* centers horizontally */
+    text-align: center;    /* centers text */
+
+    max-width: 800px;      /* 👈 THIS is key */
+    margin: 0 auto;        /* centers the block itself */
+
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.footer {
+  border-top: 1px solid rgba(245,245,247,.12);
+  padding: 18px 16px;
+  text-align: center;
+  color: rgba(245,245,247,.72);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 650px) {
+    .container {
+        grid-template-areas:
+            'header'
+            'nav_bar'
+            'main'
+            'footer';
+        padding: 10px;
+    }
+
+    .nav_bar {
+        justify-content: center; /* Center nav links on mobile */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    #logo {
+        width: 50%; /* smaller logo on mobile */
+        margin: 0 auto;
+    }
+
+    table {
+        width: 100%; /* table fits mobile screen */
+        font-size: 0.9rem;
+    }
+}
+
+#hamburger {
+    display: none; /* hidden by default */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #f5f5f7;
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    nav a {
+        display: none; /* hide regular links on small screens */
+    }
+    #hamburger {
+        display: block; /* show hamburger on mobile */
+    }
+    nav.responsive a {
+        display: block; /* show links when menu toggled */
+        margin: 5px 0;
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.exhibition {
+    display: flex;
+    flex-direction: row; /* image on left, text on right */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.exhibition img {
+    flex: 1;
+}
+
+.exhibition p, .exhibition ul {
+    flex: 2;
+}
+
+/* Mobile view */
+@media (max-width: 650px) {
+    .exhibition {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .exhibition img {
+        margin: 0 auto 15px auto;
+    }
+}
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+table {
+  margin: 0 auto;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.nav_bar {
+    display: flex;
+    justify-content: flex-end; /* keeps it right-aligned */
+}

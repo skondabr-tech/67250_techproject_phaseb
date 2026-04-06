@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shruthika Kondabrolu">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse Exhibitions">
+    <title>Exhibitions - MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a href="checkout.html">Checkout</a>
+            <button id="hamburger">&#9776;</button> <!-- ☰ icon -->
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <h2>Exhibitions</h2>
+            <h3>Runway Revolution: Fashion Through the Decades</h3>
+            <img src="../static/runwayrev.png" alt="Runway Revolution Exhibit" class="exhibit-img">
+            <p>Step into the evolution of fashion, from elegant couture of the early 20th century to today’s bold streetwear and global trends. This exhibition highlights iconic silhouettes, influential designers, and the cultural moments that shaped each era of style.</p>
+            <h4>Interactive Experiences:</h4>
+                  <ul>
+                    <li>Virtual Runway Walk: Step onto a digital runway and model outfits from different decades.</li>
+                    <li>Style Timeline Mirror: Stand in front of an interactive mirror that transforms your outfit into styles from the 1920s, 60s, 90s, and today.</li>
+                    <li>Design Your Decade: Create your own look inspired by a specific era and see it come to life on a digital mannequin.</li>
+                  </ul>
+            <h3>Fabric of Identity: Culture & Style</h3>
+            <img src="../static/fabric.png" alt="Fabric of Identity Exhibit" class="exhibit-img">
+            <p>Discover how fashion tells stories of heritage, tradition, and personal identity. Through garments, textiles, and multimedia displays, this exhibit explores how cultures around the world express themselves through clothing and how style can reflect history, values, and social change.</p>
+            <h4>Interactive Experiences:</h4>
+                <ul>
+                    <li>Global Wardrobe Explorer: Browse traditional outfits from around the world and learn their meanings through touchscreens.</li>
+                    <li>Pattern Creation Studio: Design your own textile patterns inspired by cultural motifs and print a digital sample.</li>
+                    <li>Story Threads Booth: Listen to and record personal stories about how clothing shapes identity and self-expression.</li>
+                </ul>
+            <h3>Future of Fashion: Tech & Sustainability</h3>
+            <img src="../static/future.png" alt="Future of Fashion Exhibit" class="exhibit-img">
+            <p>Experience the future of fashion through innovation and responsibility. From digital clothing and AI-assisted design to sustainable materials and ethical production, this exhibition showcases how technology is transforming the industry while addressing environmental impact.</p>
+            <h4>Interactive Experiences:</h4>
+                <ul>
+                    <li>Digital Outfit Try-On: Use augmented reality to try on virtual garments and futuristic designs.</li>
+                    <li>Sustainability Simulator: Make choices about materials and production to see the environmental impact of your fashion line.</li>
+                    <li>AI Design Lab: Collaborate with an AI tool to generate original clothing concepts based on your preferences.</li>
+                </ul>
+            <h3>Visit Us</h3>
+            <div id="map"></div>
+        </main>
+
+        <!-- OPTIONAL IMAGE SECTION -->
+        <!-- <figure class="main_img">
+            <img src="../static/someimage.png" alt="Exhibition Image">
+        </figure> -->
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>
+
