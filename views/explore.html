@@ -7,32 +7,66 @@
     <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
     <meta name="description" content="Explore MonoMuse">
     <title>Explore - MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-    <header>
-        <h1>Explore</h1>
-        <nav>
+<body onload="addYear()">
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav class="nav_bar">
             <a href="../index.html">Home</a>
             <a href="explore.html">Explore</a>
             <a href="exhibitions.html">Exhibitions</a>
             <a href="tickets.html">Buy Tickets</a>
             <a href="checkout.html">Checkout</a>
+            <button id="hamburger">&#9776;</button> <!-- ☰ icon -->
         </nav>
-    </header>
 
-    <div class="main">
-        <img src="../static/museum.jpg" alt="MonoMuse Museum" width="600">
-        <p>MonoMuse is dedicated to connecting art, technology, and human creativity.</p>
-        <ul>
-            <li><strong>Mission:</strong> Inspire curiosity through interactive art and tech.</li>
-            <li><strong>Audience:</strong> Everyone from students to professional artists.</li>
-            <li><strong>Founded:</strong> 2015</li>
-            <li><strong>Milestones:</strong> First VR art exhibition in 2017, AI-driven installations in 2022.</li>
-        </ul>
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <h2>Explore the MonoMuse Museum</h2>
+            <p>Step into the world of fashion—where creativity, culture, and innovation come together. Discover iconic styles, emerging designers, and the stories behind what we wear.</p>
+
+            <h3>Featured Exhibits</h3>
+            <ul>
+                <li>Runway Revolution: Fashion Through the Decades
+                    Explore how fashion has evolved from classic couture to modern street style.</li>
+                <li>Fabric of Identity: Culture & Style
+                    Discover how clothing reflects heritage, identity, and global influences.</li>
+                <li>Future of Fashion: Tech & Sustainability
+                    Experience cutting-edge designs, digital fashion, and sustainable innovations shaping tomorrow.</li>
+            </ul>
+
+            <h3>Upcoming Events</h3>
+            <p>Join us for designer talks, live runway showcases, styling workshops, and exclusive behind-the-scenes tours. Check back often for the latest updates!</p>
+            <h3>Featured Video</h3>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/suIsMyZ2neA"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </main>
+
+        <!-- OPTIONAL IMAGE SECTION -->
+        <!-- <figure class="main_img">
+            <img src="../static/explore_image.png" alt="Explore Image">
+        </figure> -->
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; 2026 MonoMuse</p>
-    </footer>
 </body>
 </html>
