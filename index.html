@@ -7,33 +7,80 @@
     <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
     <meta name="description" content="MonoMuse website redesign project">
     <title>MonoMuse</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="./static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    
 </head>
-<body>
-    <header>
-        <h1>MonoMuse</h1>
-        <nav>
-            <a href="./index.html">Home</a>
+<body onload="addYear()">
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <img id="logo" src="static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav class="nav_bar">
+            <a href="index.html">Home</a>
             <a href="views/explore.html">Explore</a>
             <a href="views/exhibitions.html">Exhibitions</a>
             <a href="views/tickets.html">Buy Tickets</a>
             <a href="views/checkout.html">Checkout</a>
+            <button id="hamburger">&#9776;</button> <!-- ☰ icon -->
         </nav>
-    </header>
 
-    <div class="main">
-        <h2>Welcome to MonoMuse</h2>
-        <p>
-            MonoMuse is a contemporary museum dedicated to exploring the intersection of art, technology, and human creativity. 
-            Through immersive exhibitions, interactive installations, and rotating collections, MonoMuse invites visitors to discover 
-            how digital innovation is transforming the way we create, experience, and understand art. Whether you are a first-time 
-            visitor or a returning member, our exhibitions offer new perspectives on the role of technology in culture and everyday life. 
-            Plan your visit to experience cutting-edge exhibitions, hands-on experiences, and events designed to inspire curiosity and creativity.
-        </p>
-        <a href="views/tickets.html">Buy Tickets</a>
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <h2 id="greeting">Welcome to MonoMuse</h2>
+            <p id="shortIntro">Welcome to MonoMuse, where fashion meets art and innovation. Explore the stories behind style, from timeless designs to the future of fashion.</p>
+
+            <!-- Long intro hidden by default -->
+            <p id="longIntro" style="display:none;">
+                MonoMuse is a fashion-focused museum that celebrates the artistry, culture, and evolution of style. From iconic runway moments to everyday streetwear, fashion reflects who we are and how we express ourselves.
+
+                Our exhibits highlight influential designers, global traditions, and the impact of technology and sustainability on the industry. Visitors can explore interactive displays, discover emerging trends, and gain insight into the creative processes behind the garments we wear.
+
+                At MonoMuse, fashion is more than clothing—it is a powerful form of storytelling, identity, and innovation.
+            </p>
+
+            <!-- Read More / Read Less Buttons -->
+            <button id="readMore">Read More</button>
+            <button id="readLess" style="display:none;">Read Less</button>
+
+            <!-- Optional: Homepage feature button -->
+            <div style="margin-top:20px;">
+                <a href="views/tickets.html"><button>Buy Tickets Now</button></a>
+            </div>
+
+            
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
     </div>
 
-    <footer>
-        <p>&copy; 2026 MonoMuse</p>
-    </footer>
+    <!-- jQuery Toggle Script -->
+    <script>
+    $(document).ready(function(){
+
+        $("#readMore").click(function(){ 
+            $("#longIntro").show();
+            $("#readLess").show();
+            $("#readMore").hide();
+        });
+
+        $("#readLess").click(function(){ 
+            $("#longIntro").hide();
+            $("#readLess").hide();
+            $("#readMore").show();
+        });
+
+    });
+    </script>
 </body>
 </html>
